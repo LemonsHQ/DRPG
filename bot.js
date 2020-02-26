@@ -7,7 +7,7 @@ const xp = require('./coders/xpsystem.js');
 client.setMaxListeners(0)
 if(xp && Client){
    		 xp.code();
-    		console.log('Timer loaded');
+    		console.log('Xp system loaded');
 }
 client.login(process.env.BOT_TOKEN);
 //BOT_TOKEN is the Client Secret
