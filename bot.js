@@ -46,7 +46,7 @@ if (message.author.bot) return; // ignore bots
     if(userInfo.xp > 100) {
         userInfo.level++
         userInfo.xp = 0
-        message.reply("Congratulations, you level up")
+        message.reply("Congratulations, you leveled up")
     }
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
