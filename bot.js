@@ -23,5 +23,4 @@ client.on('ready', () => {
             name: 'Summons, Type .help',
 	    type: "Listening"
         }
-    });
 });
