@@ -3,7 +3,7 @@ global.Discord = require('discord.js');
 global.client = new Discord.Client();
 
 
-const xp = require('./coders/xpsystem.js');
+const xp = require('./code/xpsystem.js');
 client.setMaxListeners(0)
 if(xp && Client){
    		 xp.code();
