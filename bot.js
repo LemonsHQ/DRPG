@@ -40,7 +40,7 @@ if (message.author.bot) return; // ignore bots
     if (!db[message.author.id]) db[message.author.id] = {
         xp: 0,
         level: 0
-      };
+      });
     db[message.author.id].xp++;
     let userInfo = db[message.author.id];
     if(userInfo.xp > 100) {
