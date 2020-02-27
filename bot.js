@@ -9,7 +9,7 @@ let db = JSON.parse(fs.readFileSync("./code/storage/xp.json", "utf8"));
 
 client.setMaxListeners(0)
 
-
+client.login(process.env.BOT_TOKEN);
 
 if(xp && Client){
    		 xp.code();
@@ -40,7 +40,7 @@ if (message.author.bot) return; // ignore bots
     if (!db[message.author.id]) db[message.author.id] = {
         xp: 0,
         level: 0
-      });
+      };
     db[message.author.id].xp++;
     let userInfo = db[message.author.id];
     if(userInfo.xp > 100) {
@@ -71,4 +71,4 @@ if (message.author.bot) return; // ignore bots
 });
 	
 
-client.login(process.env.BOT_TOKEN);
+
