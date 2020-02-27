@@ -2,7 +2,7 @@ const { Client, Attachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
 const config = require('./config.json');
-const xp = require('./code/xpl.js');
+//const xp = require('./code/xpl.js');
 const fs = require("fs");
 let db = JSON.parse(fs.readFileSync("./code/storage/xp.json", "utf8"));
 
@@ -65,7 +65,7 @@ if (message.author.bot) return; // ignore bots
         .addField("XP", memberInfo.xp+"/100")
         message.channel.sendEmbed(embed2)
     }
-    fs.writeFile("./database.json", JSON.stringify(db), (x) => {
+    fs.writeFile("./code/storage/xp.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
       });
 });
