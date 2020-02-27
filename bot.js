@@ -67,7 +67,7 @@ if (message.author.bot) return; // ignore bots
     }
     fs.writeFile("./code/storage/xp.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
-      });
+      })
 });
 	
 
