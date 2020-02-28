@@ -12,11 +12,6 @@ client.setMaxListeners(0)
 
 client.login(process.env.BOT_TOKEN);
 
-if(xp && Client){
-   		 xp.code();
-    		console.log('Xp system loaded');
-}
-
 //BOT_TOKEN is the Client Secret
 
 client.once('ready', () => {
