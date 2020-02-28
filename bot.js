@@ -27,27 +27,28 @@ client.on('ready', () => {
         }
 });
 
+
+//xp system
+client.on('message', (message, user) => {
+if (message.author.bot) return; // ignore bots
+const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+const cmd = args.shift().toLowerCase();	
 const memberInfo = db[member.id]
+const userInfo = db[message.author.id];
+const member = message.mentions.members.first();
+
 const embed2 = new Discord.RichEmbed()
         .setColor(0x4286f4)
         .addField("Level", memberInfo.level)
         .addField("XP", memberInfo.xp+"/100")	
 
-const userInfo = db[message.author.id];
-const member = message.mentions.members.first();
 const embed = new Discord.RichEmbed()
         .setColor(0x4286f4)
         .addField("Level", userInfo.level)
         .addField("XP", userInfo.xp+"/100");	
 	
 
-	
-//xp system
-client.on('message', (message, user) => {
-if (message.author.bot) return; // ignore bots
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const cmd = args.shift().toLowerCase();	
-	
+		
     db[message.author.id].xp++
 	
 	
