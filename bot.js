@@ -6,7 +6,7 @@ const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const cmd = args.shift().toLowerCase();
 	
 const fs = require("fs");
-let db = JSON.parse(fs.readFileSync("./code/storage/xp.json", "utf8"));
+const db = JSON.parse(fs.readFileSync("./code/storage/xp.json", "utf8"));
 
 
 client.setMaxListeners(0)
