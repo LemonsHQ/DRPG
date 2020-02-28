@@ -2,8 +2,7 @@ const { Client, Attachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
 const config = require('./config.json');
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const cmd = args.shift().toLowerCase();
+
 	
 const fs = require("fs");
 const db = JSON.parse(fs.readFileSync("./code/storage/xp.json", "utf8"));
@@ -51,7 +50,8 @@ const embed = new Discord.RichEmbed()
 //xp system
 client.on('message', (message, user) => {
 if (message.author.bot) return; // ignore bots
-	
+const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+const cmd = args.shift().toLowerCase();	
 	
     db[message.author.id].xp++
 	
